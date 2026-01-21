@@ -23,9 +23,16 @@ chown -R ubuntu:ubuntu "$APP_DIR"
 ### --- LOAD NVM AND NODE 22.15.0 --- ###
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
 nvm install 22.15.0
 nvm use 22.15.0
 echo "Using Node version: $(node -v)"
+
+# Add Node bin dir to PATH for this shell
+export PATH="$NVM_DIR/versions/node/$(nvm version)/bin:$PATH"
+
+echo "Using Node version: $(node -v)"
+echo "Using NPM version: $(npm -v)"
 
 cd "$APP_DIR"
 
