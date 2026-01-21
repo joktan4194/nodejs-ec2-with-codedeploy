@@ -40,7 +40,6 @@ cd "$APP_DIR"
 
 ### --- INSTALL, BUILD, AND ZERO-DOWNTIME RELOAD --- ###
 npm install --frozen-lockfile
-npm run build
 
 # Zero-downtime reload or start if not running
 pm2 reload web --update-env || pm2 start "npm start" --name web --cwd "$APP_DIR"
