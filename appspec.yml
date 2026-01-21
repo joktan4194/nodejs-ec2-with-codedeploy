@@ -2,9 +2,9 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /tmp/good-list-frontend
+    destination: /tmp/nodejs-ec2-with-codedeploy
 permissions:
-  - object: /tmp/good-list-frontend
+  - object: /tmp/nodejs-ec2-with-codedeploy
     owner: ubuntu
     group: ubuntu
 hooks:
