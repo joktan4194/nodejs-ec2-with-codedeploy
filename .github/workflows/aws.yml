@@ -39,5 +39,5 @@ jobs:
           aws deploy create-deployment \
             --application-name test \
             --deployment-group-name testdeploymentgroup \
-            --s3-location bucket=test-jt-s3,key=.zip,bundleType=zip \
+            --s3-location bucket=test-jt-s3,key=nodejs-ec2-with-codedeploy.zip,bundleType=zip \
             --region us-east-1
