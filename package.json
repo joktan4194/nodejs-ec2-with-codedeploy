@@ -1,0 +1,24 @@
+{
+  "name": "nodejs-ec2-with-codedeploy",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/joktan4194/nodejs-ec2-with-codedeploy#readme",
+  "bugs": {
+    "url": "https://github.com/joktan4194/nodejs-ec2-with-codedeploy/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joktan4194/nodejs-ec2-with-codedeploy.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
