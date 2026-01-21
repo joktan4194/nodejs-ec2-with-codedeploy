@@ -36,8 +36,14 @@ jobs:
       # Step 5: Trigger CodeDeploy
       - name: Deploy to CodeDeploy
         run: |
-          aws deploy create-deployment \
+          DEPLOYMENT_ID=$(aws deploy create-deployment \
             --application-name test \
             --deployment-group-name testdeploymentgroup \
             --s3-location bucket=test-jt-s3,key=nodejs-ec2-with-codedeploy.zip,bundleType=zip \
+            --query 'deploymentId' \
+            --output text 
             --region us-east-1
+          )
+          echo "Deployment ID: $DEPLOYMENT_ID"
+          # Optionally, wait for deployment to complete
+          aws deploy wait deployment-successful --deployment-id $DEPLOYMENT_ID --region us-east-1
