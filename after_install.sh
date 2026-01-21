@@ -28,11 +28,12 @@ nvm install 22.15.0
 nvm use 22.15.0
 echo "Using Node version: $(node -v)"
 
-# Add Node bin dir to PATH for this shell
+# ✅ Add Node bin directory to PATH so pm2 is found
 export PATH="$NVM_DIR/versions/node/$(nvm version)/bin:$PATH"
 
 echo "Using Node version: $(node -v)"
 echo "Using NPM version: $(npm -v)"
+echo "Checking PM2: $(which pm2 || echo 'pm2 not found')"
 
 cd "$APP_DIR"
 
